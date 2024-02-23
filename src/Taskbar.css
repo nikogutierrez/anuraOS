@@ -1,0 +1,67 @@
+#taskbar-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    /* height: 100%; */
+}
+
+#taskbar-separator {
+    background-color: #999;
+    height: 40px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+.hoverMenu {
+    display: none;
+    bottom: 50px;
+    transform: translate(
+        -40%
+    ); /* 40% is entirely arbritrary and looks centerish, while 50% doesn't */
+}
+
+.taskbar-app:hover .hoverMenu {
+    display: block;
+}
+.lightbar {
+    transition:
+        visibility 0s,
+        opacity 5s linear;
+    opacity: 1;
+}
+.lightbar-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.taskbar-button {
+    filter: drop-shadow(0px 3px 7px #111);
+}
+#taskinfo-container {
+    position: absolute;
+    height: 70%;
+
+    /* border: 2px solid rgba(22, 22, 22, 0.6); */
+
+    background-color: rgba(255, 255, 255, 0.15);
+    aspect-ratio: 1/1;
+    padding: 0.1em;
+    padding-left: 1.5em;
+
+    padding-right: 1.5em;
+    /* width: 5em; */
+    right: 0.3em;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#taskinfo-container > * {
+    color: whitesmoke;
+    cursor: pointer;
+}
